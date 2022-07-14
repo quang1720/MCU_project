@@ -304,7 +304,8 @@ void loop()
   
 //  doccambien();
   demzone();
-  //docgoc();
+  if (digitalRead(13)==HIGH)
+  {
   if (count < 3)
   {
     dithang(126);
@@ -314,8 +315,8 @@ void loop()
   else{
     l=l+1;
   }
-  Serial.print("\n l=");
-  Serial.print(l);
+//  Serial.print("\n l=");
+//  Serial.print(l);
   
   while(l!=0)
   {
@@ -352,6 +353,11 @@ void loop()
 //  Serial.print(cambienben);
 
 //  delay(3000);
+  }
+  else
+  {
+    stop();
+  }
 
 
 }
